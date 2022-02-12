@@ -1,0 +1,408 @@
+=============================================
+               Practice Note
+=============================================
+
+
+'১'. নতুন একটা স্ক্রিপ্ট ফাইল খুলবে। সেটাকে index.html এর সাথে কানেক্ট 
+করতে পারো কিনা?
+
+# <!-- 1. JS File Attachment -->
+
+=> 'JS file attach করা': একই folder এ 'panda.js' file খুলে তা add 
+করা হলো।
+
+
+// javascript
+
+    <script src="panda.js"></script>
+
+
+
+
+
+
+
+'২'. যতগুলা ইলিমেন্টে h2 ট্যাগ আছে সেগুলাকে সিলেক্ট করে তার লেখাগুলার 
+কালার lightblue করেদিতে পারো কিনা।
+
+
+=> 'h2 tag এর color change করা JS দিয়ে': element by tag দিয়ে পারলাম না। 
+class দিয়েও না। id দিয়ে পারা গেলো।
+
+
+# <!-- 2. access h2 : shoes -->
+
+
+// HTML
+
+    <h2 id="shoe">Shoes</h2>
+    <h2 id="back">Backpack</h2>
+
+
+
+// javascript
+
+<script>
+
+    # h2 : shoes
+    const shoes = document.getElementById('shoe');
+    shoes.style.color = 'red';
+
+    # h2 : backpack
+    const backpack = document.getElementById('back');
+    backpack.style.color = 'red';
+
+</script>
+
+
+
+
+
+
+৩. ওই ওয়েবসাইট এ backpack আইডি দিয়ে একটা সেকশন আছে। সেই সেকশনের 
+ব্যাকগ্রাউন্ড কালার tomato করে দিতে পারো কিনা। 
+
+=> backpack areaর id দিয়ে নিয়ে এসে 'background color change করা': 
+id দিয়ে access করে নিয়ে এসে background color change করা গেলো।
+
+
+# <!-- 3. backpack area : background color change -->
+
+// HTML
+
+    <section class="container my-5" id="backpack">
+
+
+// javascript
+
+<script>
+
+    const backpackArea = document.getElementById('backpack');
+    backpackArea.style.backgroundColor = 'lightblue';
+
+</script>
+
+
+
+
+
+
+
+
+৪. card ক্লাস যতগুলা জায়গায় ইউজ করা হয়েছে সবগুলা কার্ড এর বর্ডার 
+রেডিয়াস ৩০px করে দিতে পারো কিনা 
+
+
+=> card গুলোর class দিয়ে নিয়ে এসে 'border radius 30px করা': class 
+দিয়ে করা গেলো না। id দিয়ে করতে হলো।
+
+
+# <!--4. access card by id : border radius- 30px -->
+
+
+// HTML
+
+    <div id="card-1" class="card border-0 shadow-lg h-100 ">
+    <div id="card-2" class="card border-0 shadow-lg h-100 ">
+    <div id="card-3" class="card border-0 shadow-lg h-100 ">
+    <div id="card-4" class="card border-0 shadow-lg h-100 ">
+    <div id="card-5" class="card border-0 shadow-lg h-100 ">
+    <div id="card-6" class="card border-0 shadow-lg h-100 ">
+
+
+//javascript
+
+
+<script>
+
+    # // card-1
+    const card1Border = document.getElementById('card-1');
+    card1Border.style.borderRadius = '30px';
+
+    # // card-2
+    const card2Border = document.getElementById('card-2');
+    card2Border.style.borderRadius = '30px';
+
+    # // card-3
+    const card3Border = document.getElementById('card-3');
+    card3Border.style.borderRadius = '30px';
+
+    # // card-4
+    const card4Border = document.getElementById('card-4');
+    card4Border.style.borderRadius = '30px';
+
+    # // card-5
+    const card5Border = document.getElementById('card-5');
+    card5Border.style.borderRadius = '30px';
+
+    # // card-6
+    const card6Border = document.getElementById('card-6');
+    card6Border.style.borderRadius = '30px';
+
+</script>
+
+
+
+
+
+
+
+৫. কোন একটা ফাংশন লিখো। সেটার ভিতরে কনসোল লগ হবে। এবং সেই 
+ফাংশন টা ক্লিক হ্যান্ডলার হিসেবে কোন একটা বাটনে যোগ করো
+
+
+=> কোন একটা 'button এ click handler add করা': JS এ function লিখে 
+তারপর function call set করা হলো submit button এর onclick 
+attribute এ।
+
+
+
+# <!-- 5. add click handler on submit button
+        (button এ function call set করা হলো) -->
+
+
+// HTML
+
+    <button onclick="clickHandling()" id="submit-button" class="panda-button" disabled>Submit</button>
+
+
+// javascript
+
+<script>
+
+    # // function লেখা হলো click এ console করবে
+    function clickHandling() {
+        console.log('button is clicked');
+    }
+
+</script>
+
+
+
+
+
+
+
+
+৬. এইবার নতুন করে সবগুলা buy now বাটনে এমন একটা ইভেন্ট হ্যান্ডলার 
+যোগ করো। যাতে যেকোন একটা buy now বাটনে চাপ দিলে সেটা ওয়েবসাইট 
+থেকে রিমুভ হয়ে যায়। একটু চিন্তা করে করার চেষ্টা করো। 
+
+
+=> 'buy now button এ click করলে remove হয়ে যাবে': remove করা গেলো। 
+id দিয়ে access করতে হলো।
+
+# <!-- 6. buy now button remove by clicking -->
+
+
+// HTML
+
+    # btn-1
+    <button id="buy-btn-1" class="panda-button">
+        Buy Now
+    </button>
+
+    # btn-2
+    <button id="buy-btn-2" class="panda-button">
+        Buy Now
+    </button>
+
+    # btn-3
+    <button id="buy-btn-3" class="panda-button">
+        Buy Now
+    </button>
+
+    # btn-4
+    <button id="buy-btn-4" class="panda-button">
+        Buy Now
+    </button>
+
+    # btn-5
+    <button id="buy-btn-5" class="panda-button">
+        Buy Now
+    </button>
+
+    # btn-6
+    <button id="buy-btn-6" class="panda-button">
+        Buy Now
+    </button>
+
+
+
+// javascript
+
+
+<script>
+
+# // id দিয়ে access করতে হলো
+
+    # // btn-1
+    document.getElementById('buy-btn-1').addEventListener('click', function () {
+        document.getElementById('buy-btn-1').style.display = 'none';
+    })
+
+    # // btn-2
+    document.getElementById('buy-btn-2').addEventListener('click', function () {
+        document.getElementById('buy-btn-2').style.display = 'none';
+    })
+
+    # // btn-3
+    document.getElementById('buy-btn-3').addEventListener('click', function () {
+        document.getElementById('buy-btn-3').style.display = 'none';
+    })
+
+    # // btn-4
+    document.getElementById('buy-btn-4').addEventListener('click', function () {
+        document.getElementById('buy-btn-4').style.display = 'none';
+    })
+
+    # // btn-5
+    document.getElementById('buy-btn-5').addEventListener('click', function () {
+        document.getElementById('buy-btn-5').style.display = 'none';
+    })
+
+    # // btn-6
+    document.getElementById('buy-btn-6').addEventListener('click', function () {
+        document.getElementById('buy-btn-6').style.display = 'none';
+    })
+
+</script>
+
+
+
+
+
+
+
+
+৭. একদম নিচে একটা LETS STAY IN TOUCH নামে একটা জিনিস আছে। 
+সেখানে তুমি submit বাটনটা disable করে ফেলবে। তারপর কেউ যদি উপরে 
+input ফিল্ডে যদি একজাক্টলি email শব্দটা লিখে। তাহলে বাটন একটিভ হবে। 
+আর যদি অন্য কিছু লিখে তাহলে বাটনটা একটিভ হবে না।
+
+
+=> last part এর 'submit button কে default ভাবে disable রাখা হবে'।
+email field এ 'email' লেখা হলে তারপর submit button active হবে।
+
+
+# <!-- 7. submit button enable হবে input text email match করার পর -->
+
+
+// HTML
+
+    <button onclick="clickHandling()" id="submit-button" class="panda-button" disabled>
+        Submit
+    </button>
+
+
+// javascript
+
+
+# // 7. submit button disabled until write email on input box
+
+
+# // email input match
+
+<script>
+
+document.getElementById('email-input').addEventListener('keyup', function () {
+
+    # // email input
+    const emailInput = document.getElementById('email-input');
+
+    # // submit button
+    const submitBtn = document.getElementById('submit-button');
+
+    # // condition
+
+    if (emailInput.value == 'email') {
+        submitBtn.removeAttribute('disabled');
+    }
+    else {
+        submitBtn.setAttribute('disabled', true);
+    }
+
+})
+
+</script>
+
+
+
+
+
+
+
+
+
+৮. (অপশনাল) একটা মজার চ্যালেঞ্জ। কোন একটা ইমেজ এর উপরে mouseenter 
+করলে সেই ইমেজটা চেইঞ্জ হয়ে যাবে। একটু গুগলে সার্চ দিয়ে দেখো। জিনিসটা 
+কিভাবে করা যেতে পারে। 
+
+
+=> কোন একটা image এ 'moouse enter করলে image টা change হয়ে যাবে'।
+id দ্বারা image কে access করে তাতে function এ ওই id তে ই image 
+source বদলে দেয়া হলো।
+
+
+# <!-- 8. Change Red Bag image -->
+
+
+// HTML
+
+    <img id="red-bag" src="images/bags/bag-1.png" class="card-img-top" alt="...">
+
+
+
+// javascript
+
+
+<script>
+
+# // 8. Change Red Bag image
+
+    document.getElementById('red-bag').addEventListener('mouseenter', function () {
+        document.getElementById('red-bag').src = 'images/bags/bag-4.jpg';
+    })
+
+</script>
+
+
+
+
+
+
+
+
+৯. (অপশনাল) নিচের যে LETS STAY IN TOUCH আছে সেখানে কোন খালি জায়গায় 
+ডাবল ক্লিক করলে ঐটার পিছনের কালার চেইঞ্জ হয়ে যাবে। 
+
+
+=> last part এ খালি জায়গায় 'double click করলে background color 
+change' করা হলো
+
+
+# <!-- double click করলে এই section এর background color change হবে -->
+    
+
+// HTML
+
+    <section style="height: 300px;"
+    class="container panda-bg-info d-flex justify-content-center align-items-center rounded-3" id="subscribe">
+
+
+// javascript
+
+<script>
+
+# // 9. Change Background color by double clicking
+
+    document.getElementById('subscribe').addEventListener('dblclick', function () {
+        document.getElementById('subscribe').style.backgroundColor = '#5dade2';
+    })
+
+</script>
+
+
+
+
+

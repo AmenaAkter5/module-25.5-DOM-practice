@@ -1,0 +1,36 @@
+=========================================
+               Practice Day
+=========================================
+
+
+** html5 tags --> google search [video- 1:25]
+
+কাজ- 
+
+1. বাকি থাকা video দেখে ফেলা।
+2. html5 revise করা
+3. JS basic concepts revise করা।
+
+4. panda commerce এ DOM manipulate করা -
+
+
+'->' JS file attach করা
+'->' h2 tag এর color change করা JS দিয়ে
+'->' backpack areaর id দিয়ে নিয়ে এসে background color change করা
+'->' card গুলোর class দিয়ে নিয়ে এসে border radius 30px করা
+'->' কোন একটা button এ click handler add করা। button এ click করলে
+console এ কোন লেখা দেখাবে যা function দিয়ে set করা হবে।
+'->' buy now button এ click করলে remove হয়ে যাবে। সবগুলো button কে
+access করে এই feature add করবে।
+'->' last part এর submit button কে default ভাবে disable রাখা হবে।
+email field এ 'email' লেখা হলে তারপর submit button active হবে।
+
+
+'optional:'
+
+- কোন একটা image এ moouse enter করলে image টা change হয়ে যাবে।
+- last part এ খালি জায়গায় double click করলে background color 
+change হয়ে যাবে।
+
+
+
